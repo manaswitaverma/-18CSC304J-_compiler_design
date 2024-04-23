@@ -1,0 +1,181 @@
+// Java program for simple calculator
+
+import java.io.*;
+
+import java.lang.*;
+
+import java.lang.Math;
+
+import java.util.Scanner;
+
+import java.util.*;
+
+ 
+
+// Driver class
+
+public class BasicCalculator {
+
+// main function
+
+public static void main(String[] args)
+
+{
+
+// Stores two numbers
+
+double num1, num2;
+
+ 
+
+// Take input from the user
+
+Scanner sc = new Scanner(System.in);
+
+boolean b=true;
+
+        while(b==true){
+
+ 
+
+System.out.println("Enter the number of numbers/ a number:");
+
+        int n=sc.nextInt();
+
+       
+
+System.out.println("Enter the operator (+,-,*,/,l,e,t,s,y):");
+
+ 
+
+char op = sc.next().charAt(0);
+
+double o = 0;
+
+ 
+
+switch (op) {
+
+// case to add two numbers
+
+case '+':
+
+   for(int i=0;i<n;i++)
+
+o +=sc.nextInt();
+
+break;
+
+ 
+
+// case to subtract two numbers
+
+case '-':
+
+    o=sc.nextInt();
+
+for(int i=1;i<n;i++)
+
+o=o-sc.nextInt();
+
+break;
+
+ 
+
+// case to multiply two numbers
+
+case '*':
+
+    o=1;
+
+for(int i=0;i<n;i++)
+
+o*=sc.nextInt();
+
+break;
+
+ 
+
+// case to divide two numbers
+
+case '/':
+
+    o=1;
+
+for(int i=0;i<n;i++)
+
+o /=sc.nextInt();
+
+break;
+
+ 
+
+case 'l':
+
+o=Math.log(n);
+
+break;
+
+ 
+
+case 's':
+
+o=Math.sqrt(n);
+
+break;
+
+ 
+
+case 'e':
+
+o=Math.exp(n);
+
+break;
+
+ 
+
+case 't':
+
+System.out.println("Sin: "+Math.sin(n));
+
+System.out.println("Cos: "+Math.cos(n));
+
+System.out.println("Tan: "+Math.tan(n));
+
+break;
+
+ 
+
+default:
+
+System.out.println("You enter wrong input");
+
+}
+
+ 
+
+System.out.println("The final result:");
+
+System.out.println();
+
+ 
+
+// print the final result
+
+System.out.println( o);
+
+ 
+
+System.out.println("Do you want to keep calculating? (Y/N)");
+
+char c=sc.next().charAt(0);
+
+if(c=='N' || c=='n')
+
+b=false;
+
+}
+
+}
+
+}
